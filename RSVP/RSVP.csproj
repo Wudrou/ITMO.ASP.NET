@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Reg.aspx" />
+    <Content Include="seeyouthere.html" />
+    <Content Include="sorryyoucantcome.html" />
     <Content Include="Start.aspx" />
     <Content Include="Styles.css" />
     <Content Include="Web.config" />
