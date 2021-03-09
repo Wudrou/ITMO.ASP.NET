@@ -34,3 +34,10 @@ table, td, th {
     text-align: left;
     margin: 10px 0;
 }
+
+.footer_menu li {
+    margin: 0px;
+    padding: 0 20px;
+    display: inline;
+    border-right: 1px solid #000000;
+}

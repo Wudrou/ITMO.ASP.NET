@@ -11,7 +11,7 @@ namespace RSVP
 {
 
 
-    public partial class Start
+    public partial class About
     {
     }
 }
