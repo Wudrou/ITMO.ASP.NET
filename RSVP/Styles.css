@@ -41,3 +41,8 @@ table, td, th {
     display: inline;
     border-right: 1px solid #000000;
 }
+
+.footer {
+    font-size: 18px;
+    text-align: left;
+}

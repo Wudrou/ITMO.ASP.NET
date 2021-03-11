@@ -11,10 +11,15 @@ namespace RSVP
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            Application["Visitors"] = 0;
         }
         protected void Application_OnEndRequest()
         {
             Response.Write("<hr />Эта страница была загружена " + DateTime.Now.ToString());
+        }
+        void Session_Start(object sender, EventArgs e)
+        {
+            Application["Visitors"] = long.Parse(Application["Visitors"].ToString()) + 1;
         }
     }
 }
