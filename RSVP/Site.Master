@@ -11,6 +11,10 @@
         .auto-style1 {
             width: 100%;
         }
+        .footer_menu {
+            height: 18px;
+            width: 568px;
+        }
     </style>
 </head>
 <body>
