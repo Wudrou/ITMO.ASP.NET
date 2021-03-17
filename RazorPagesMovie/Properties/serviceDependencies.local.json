@@ -5,6 +5,9 @@
       "type": "mssql.local",
       "connectionId": "RazorPagesMovieContext",
       "secretStore": null
+    },
+    "secrets1": {
+      "type": "secrets.user"
     }
   }
 }

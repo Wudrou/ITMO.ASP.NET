@@ -3,6 +3,9 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "RazorPagesMovieContext"
+    },
+    "secrets1": {
+      "type": "secrets"
     }
   }
 }
