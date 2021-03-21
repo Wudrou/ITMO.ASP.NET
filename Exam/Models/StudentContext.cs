@@ -12,6 +12,7 @@ namespace Exam.Models
         {
             this.Configuration.ProxyCreationEnabled = false;
         }
+
         public DbSet<Student> Students { get; set; }
     }
 }

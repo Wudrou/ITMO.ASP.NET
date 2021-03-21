@@ -23,36 +23,38 @@ namespace Exam.Controllers
             ViewBag.WorthStudents = db.Students.ToList<Student>().OrderBy(s => s.Total).Take(5);
             return View();
         }
-        //public FileStreamResult CreateFile()
-        //{
-        //    var students = "";
-        //    foreach (var item in db.Students)
-        //    {
-        //        students += item.ToString() + Environment.NewLine;
-        //    }
-        //    var byteArray = Encoding.ASCII.GetBytes(students);
-        //    var stream = new MemoryStream(byteArray);
-        //    return File(stream, "text/plain", "Список студентов.txt");
-        //}
-
-        public void SaveTxt()
+        public FileStreamResult CreateFile()
         {
-            StreamWriter sw = new StreamWriter(Server.MapPath("~/Files/Список студентов.txt"), true);
+            var students = "";
             foreach (var item in db.Students)
             {
-                sw.WriteLine(item.ToString());
+                students += item.FirstName + " " + item.LastName + ", группа: " + item.Group + ", литература: " + item.Value_Literature +
+                    ", математика: " + item.Value_Maths + ", физика: " + item.Value_Physics + ", химия: " + item.Value_Chemistry + ", история: " + item.Value_History +
+                    ", ОБЩИЙ БАЛЛ: " + item.Total + Environment.NewLine;
             }
-            sw.Close();
+            var byteArray = Encoding.UTF8.GetBytes(students);
+            var stream = new MemoryStream(byteArray);
+            return File(stream, "text/plain", "Список студентов.txt");
         }
-        public FileResult CreateFile()
-        {
-            SaveTxt();
 
-            string file_path = Server.MapPath("~/Files/Список студентов.txt");
-            string file_type = "application/txt";
-            string file_name = "Список студентов.txt";
-            return File(file_path, file_type, file_name);
-        }
+        //public void SaveTxt()
+        //{
+        //    StreamWriter sw = new StreamWriter(Server.MapPath("~/Files/Список студентов.txt"), true);
+        //    foreach (var item in db.Students)
+        //    {
+        //        sw.WriteLine(item.ToString());
+        //    }
+        //    sw.Close();
+        //}
+        //public FileResult CreateFile()
+        //{
+        //    SaveTxt();
+
+        //    string file_path = Server.MapPath("~/Files/Список студентов.txt");
+        //    string file_type = "application/txt";
+        //    string file_name = "Список студентов.txt";
+        //    return File(file_path, file_type, file_name);
+        //}
         // GET: Students
         public ActionResult Index()
         {
