@@ -1,0 +1,82 @@
+﻿@model Exam.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Group)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Group)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value_Literature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value_Literature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value_Maths)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value_Maths)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value_Physics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value_Physics)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value_Chemistry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value_Chemistry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value_History)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value_History)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,144 @@
+﻿@model Exam.Models.Student
+
+@{
+    ViewBag.Title = "Рейтинг студентов";
+}
+
+<h2>Топ 5 лучших студентов</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Group)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Literature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Maths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Physics)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Chemistry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_History)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.TopStudents)
+    {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @item.Group
+            </td>
+            <td>
+                @item.Value_Literature
+            </td>
+            <td>
+                @item.Value_Maths
+            </td>
+            <td>
+                @item.Value_Physics
+            </td>
+            <td>
+                @item.Value_Chemistry
+            </td>
+            <td>
+                @item.Value_History
+            </td>
+            <td>
+                @item.Total
+            </td>
+        </tr>
+    }
+</table>
+
+<h2>Топ 5 худших студентов</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Group)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Literature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Maths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Physics)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Chemistry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_History)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in ViewBag.WorthStudents)
+    {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @item.Group
+            </td>
+            <td>
+                @item.Value_Literature
+            </td>
+            <td>
+                @item.Value_Maths
+            </td>
+            <td>
+                @item.Value_Physics
+            </td>
+            <td>
+                @item.Value_Chemistry
+            </td>
+            <td>
+                @item.Value_History
+            </td>
+            <td>
+                @item.Total
+            </td>
+        </tr>
+    }
+</table>
+

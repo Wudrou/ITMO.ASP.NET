@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Exam.Models.Student>
+
+@{
+    ViewBag.Title = "Табель успеваемости студентов";
+}
+
+<h2>Табель успеваемости студентов</h2>
+
+<p>
+    @Html.ActionLink("Добавить нового студента", "Create")
+    @Html.ActionLink("Скачать список студентов", "CreateFile")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Group)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Literature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Maths)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Physics)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_Chemistry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value_History)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Group)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value_Literature)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value_Maths)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value_Physics)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value_Chemistry)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Value_History)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Total)
+    </td>
+    <td>
+        @Html.ActionLink("Изменить", "Edit", new { id = item.StudentId }) |
+        @Html.ActionLink("Удалить", "Delete", new { id = item.StudentId })
+    </td>
+</tr>
+}
+</table>
